@@ -1,0 +1,12 @@
+{
+  "domain": "airsmart",
+  "name": "AirSmart Ventilation",
+  "codeowners": ["@tom-dierckx"],
+  "config_flow": true,
+  "dependencies": ["mqtt"],
+  "documentation": "https://github.com/tom-dierckx/homeassistant-airsmart",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/tom-dierckx/homeassistant-airsmart/issues",
+  "mqtt": ["tasmota/discovery/+/config"],
+  "version": "0.3.0"
+}

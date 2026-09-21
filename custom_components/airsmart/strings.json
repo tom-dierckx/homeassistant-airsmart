@@ -1,0 +1,84 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "AirSmart Ventilation",
+        "description": "Pick the AirSmart unit found on your MQTT broker.",
+        "data": {
+          "device_topic": "Unit"
+        }
+      },
+      "manual": {
+        "title": "AirSmart Ventilation",
+        "description": "No unit was discovered. Enter the Tasmota topic details from the retained `tasmota/discovery/<mac>/config` message: the leading part of `ft` (before `/%prefix%/`) and the value of `t`.",
+        "data": {
+          "topic_prefix": "Full-topic prefix",
+          "device_topic": "Device topic"
+        }
+      },
+      "confirm": {
+        "title": "AirSmart Ventilation",
+        "description": "Set up **{name}** ({model}, topic `{device_topic}`)?"
+      }
+    },
+    "abort": {
+      "already_configured": "This AirSmart unit is already configured",
+      "mqtt_unavailable": "Set up and connect the MQTT integration first",
+      "not_airsmart": "This Tasmota device does not look like an AirSmart unit"
+    }
+  },
+  "entity": {
+    "select": {
+      "ventilation_level": {
+        "name": "Ventilation level",
+        "state": {
+          "low": "Low",
+          "medium": "Medium",
+          "high": "High",
+          "boost": "Boost"
+        }
+      }
+    },
+    "switch": {
+      "bypass": { "name": "Bypass" }
+    },
+    "number": {
+      "boost_timer": { "name": "Boost timer" },
+      "setpoint_low": { "name": "Low level airflow" },
+      "setpoint_medium": { "name": "Medium level airflow" },
+      "setpoint_high": { "name": "High level airflow" },
+      "setpoint_boost": { "name": "Boost level airflow" }
+    },
+    "button": {
+      "reset_filter": { "name": "Reset filter counter" },
+      "sync_clock": { "name": "Sync clock" }
+    },
+    "sensor": {
+      "freshair_temp": { "name": "Fresh air temperature" },
+      "extraction_temp": { "name": "Extraction temperature" },
+      "q_supply": { "name": "Supply airflow" },
+      "q_blowoff": { "name": "Exhaust airflow" },
+      "pwm_supply": { "name": "Supply fan PWM" },
+      "pwm_blowoff": { "name": "Exhaust fan PWM" },
+      "air_quality_sensor": { "name": "Air quality sensor" },
+      "bypass_mode": { "name": "Bypass mode" },
+      "firmware": { "name": "Firmware version" },
+      "wifi_signal": { "name": "Wi-Fi signal" },
+      "wifi_rssi": { "name": "Wi-Fi signal strength" },
+      "uptime": { "name": "Uptime" },
+      "free_memory": { "name": "Free memory" },
+      "mqtt_connections": { "name": "MQTT connections" }
+    },
+    "binary_sensor": {
+      "alarm1": { "name": "Alarm 1" },
+      "alarm2": { "name": "Alarm 2" },
+      "warning": { "name": "Warning" },
+      "frostprotect_status": { "name": "Frost protection active" },
+      "frost_protect_inlet_off": { "name": "Frost protection inlet off" },
+      "frost_protect_unbalanced": { "name": "Frost protection unbalanced" },
+      "bypass_status": { "name": "Bypass open" },
+      "bypass_in_manual": { "name": "Bypass in manual mode" }
+    }
+  }
+}
