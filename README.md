@@ -1,7 +1,7 @@
 # AirSmart Ventilation for Home Assistant
 
-I have an AirSmart / Ictus heat-recovery ventilation unit at home with the
-ESP8266 add-on board that normally talks to `api.airsmart.pro`. This is a
+I have an AirSmart / Ictus heat-recovery ventilation unit at home it 
+comes with an ESP8266 that talks to `api.airsmart.pro`. This is a
 Home Assistant integration that talks to it directly over MQTT on the local
 network instead.
 
