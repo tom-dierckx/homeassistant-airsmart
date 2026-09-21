@@ -11,7 +11,7 @@
       },
       "manual": {
         "title": "AirSmart Ventilation",
-        "description": "No unit was discovered. Enter the Tasmota topic details from the retained `tasmota/discovery/<mac>/config` message: the leading part of `ft` (before `/%prefix%/`) and the value of `t`.",
+        "description": "No unit was discovered. Enter the Tasmota topic details from the retained `tasmota/discovery/[mac]/config` message: the leading part of `ft` (before `/%prefix%/`) and the value of `t`.",
         "data": {
           "topic_prefix": "Full-topic prefix",
           "device_topic": "Device topic"
