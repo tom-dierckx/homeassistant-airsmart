@@ -1,0 +1,15 @@
+# Day/night ventilation schedule, driven by a `schedule` helper.
+alias: Ventilation day/night schedule
+description: Medium while the ventilation schedule is on, Low otherwise.
+mode: single
+
+triggers:
+  - trigger: state
+    entity_id: schedule.ventilation_schedule
+
+actions:
+  - action: select.select_option
+    target:
+      entity_id: select.airsmart_ventilation_ventilation_level
+    data:
+      option: "{{ 'medium' if trigger.to_state.state == 'on' else 'low' }}"

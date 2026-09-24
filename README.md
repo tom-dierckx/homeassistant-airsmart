@@ -140,6 +140,14 @@ Availability follows the retained Tasmota last-will (`Online` / `Offline`).
   switch. That's the ESP's and I haven't touched it - ignore or disable
   it.
 
+## Examples
+
+[`examples/`](examples/) has automations you can copy into your own setup:
+
+- [`ventilation_schedule.yaml`](examples/ventilation_schedule.yaml) - switches
+  the level between Low and Medium based on a `schedule` helper (e.g. Medium
+  during the day, Low overnight).
+
 ## Contributing
 
 Captures contain credentials so please do not share them however if you can get more info related the bypass and bypass polarity that would be awesome (send in an issue).
